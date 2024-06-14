@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}本を追加{% endblock %}
+
+{% block content %}
+<h1>本を追加</h1>
+<form method="POST">
+    <label for="title">タイトル:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="author">著者:</label>
+    <input type="text" id="author" name="author" required>
+    <label for="read_date">読んだ日付 (YYYY-MM-DD):</label>
+    <input type="date" id="read_date" name="read_date" required>
+    <label for="review">感想:</label>
+    <textarea id="review" name="review" required></textarea>
+    <button type="submit">追加</button>
+</form>
+{% endblock %}

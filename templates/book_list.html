@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}本の一覧表示{% endblock %}
+
+{% block content %}
+<h1>本の一覧表示</h1>
+<ul>
+    {% for book in books %}
+        <li>
+            <strong>タイトル:</strong> {{ book.title }}<br>
+            <strong>著者:</strong> {{ book.author }}<br>
+            <strong>読んだ日付:</strong> {{ book.read_date }}<br>
+            <strong>感想:</strong> {{ book.review }}<br>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
